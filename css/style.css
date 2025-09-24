@@ -1,3 +1,98 @@
+
+/* Desktop social buttons */
+.navbar-top-right.desktop-social {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  z-index: 10;
+}
+.navbar-social-buttons {
+  display: flex;
+  gap: 10px;
+}
+.navbar-social-buttons .social-btn {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 18px;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar-social-buttons .social-btn.linkedin { color: #0077b5; }
+.navbar-social-buttons .social-btn.github { color: #333; }
+.navbar-social-buttons .social-btn.email { color: #d44638; }
+.navbar-social-buttons .social-btn:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+
+/* Hide desktop social on mobile, show mobile-social links */
+@media (max-width: 768px) {
+  .navbar-top-right.desktop-social {
+    display: none !important;
+  }
+  .nav-menu .mobile-social {
+    display: flex !important;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+    align-items: flex-start;
+  }
+  .nav-menu .mobile-social a {
+    color: #333;
+    font-size: 16px;
+    padding: 4px 0;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    box-shadow: none;
+    display: inline;
+    align-items: center;
+  }
+  .nav-menu .mobile-social a i.fa-external-link {
+    margin-left: 4px;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+}
+
+/* Hide mobile-social links on desktop */
+.nav-menu .mobile-social {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-top-right {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    padding-right: 0;
+    z-index: 10;
+  }
+  .navbar-social-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto;
+  }
+  .navbar-social-buttons .social-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
 @charset "UTF-8";
 
 /*--------------------------------------------------------------
